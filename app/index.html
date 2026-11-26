@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ZenithStat - National Statistics & Economic Indicators</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header class="navbar">
+  <div class="brand">
+    <span class="logo-icon">📊</span>
+    <span class="brand-name">ZenithStat</span>
+    <span class="badge">Official Bureau</span>
+  </div>
+  <nav class="nav-links">
+    <button class="nav-btn active" data-view="overview">Overview</button>
+    <button class="nav-btn" data-view="economy">Economy</button>
+    <button class="nav-btn" data-view="demographics">Demographics</button>
+    <button class="nav-btn" data-view="trade">Trade & Industry</button>
+  </nav>
+  <div class="country-selector">
+    <label for="countrySelect">Nation:</label>
+    <select id="countrySelect">
+      <option value="us">United States</option>
+      <option value="vn">Vietnam</option>
+      <option value="jp">Japan</option>
+      <option value="de">Germany</option>
+    </select>
+  </div>
+</header>
+
+<main class="container">
+  <section id="keyIndicators" class="indicators-grid"></section>
+  <section id="chartSection" class="content-panel"></section>
+  <section id="tableSection" class="content-panel"></section>
+</main>
+
+<footer class="footer">
+  <p>ZenithStat National Data Bureau &bull; Data Sources: National Statistics Offices &amp; Central Banks &bull; Updated 2026</p>
+</footer>
+<script type="module" src="./main.js"></script>
+</body>
+</html>

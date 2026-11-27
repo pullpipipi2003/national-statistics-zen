@@ -1,44 +1,64 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ZenithStat - National Statistics & Economic Indicators</title>
-<link rel="stylesheet" href="./style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VietStat Observatory — National Statistical Portal (2015–2025)</title>
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-<header class="navbar">
-  <div class="brand">
-    <span class="logo-icon">📊</span>
-    <span class="brand-name">ZenithStat</span>
-    <span class="badge">Official Bureau</span>
+  <div class="bulletin-bar">
+    <div class="container bulletin-inner">
+      <span class="bulletin-badge">OFFICIAL STATISTICAL COMPENDIUM</span>
+      <span>Reference Period: <strong>2015–2025 Annual &amp; Q4 Series</strong></span>
+      <span class="bulletin-sep">•</span>
+      <span>Constant Price Base: <strong>2020 VND / USD Merchandise Valuation</strong></span>
+      <span class="bulletin-sep">•</span>
+      <span>Zero-Network Offline Edition</span>
+    </div>
   </div>
-  <nav class="nav-links">
-    <button class="nav-btn active" data-view="overview">Overview</button>
-    <button class="nav-btn" data-view="economy">Economy</button>
-    <button class="nav-btn" data-view="demographics">Demographics</button>
-    <button class="nav-btn" data-view="trade">Trade & Industry</button>
-  </nav>
-  <div class="country-selector">
-    <label for="countrySelect">Nation:</label>
-    <select id="countrySelect">
-      <option value="us">United States</option>
-      <option value="vn">Vietnam</option>
-      <option value="jp">Japan</option>
-      <option value="de">Germany</option>
-    </select>
-  </div>
-</header>
 
-<main class="container">
-  <section id="keyIndicators" class="indicators-grid"></section>
-  <section id="chartSection" class="content-panel"></section>
-  <section id="tableSection" class="content-panel"></section>
-</main>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#/" class="brand-link" aria-label="VietStat Observatory Home">
+        <svg class="brand-crest" viewBox="0 0 40 40" width="38" height="38" aria-hidden="true">
+          <rect x="2" y="2" width="36" height="36" rx="8" fill="#0f233c"/>
+          <path d="M9 28 L9 19 L14 19 L14 28 Z M17.5 28 L17.5 14 L22.5 14 L22.5 28 Z M26 28 L26 10 L31 10 L31 28 Z" fill="#38bdf8"/>
+          <path d="M8 16 L16 12 L22 14 L31 7" fill="none" stroke="#f59e0b" stroke-width="2.4" stroke-linecap="round"/>
+        </svg>
+        <div>
+          <div class="brand-title">VietStat Observatory</div>
+          <div class="brand-subtitle">Vietnam National Accounts, Trade, Demographics &amp; Provincial Atlas</div>
+        </div>
+      </a>
 
-<footer class="footer">
-  <p>ZenithStat National Data Bureau &bull; Data Sources: National Statistics Offices &amp; Central Banks &bull; Updated 2026</p>
-</footer>
-<script type="module" src="./main.js"></script>
+      <nav class="primary-nav" id="primary-nav" aria-label="Statistical sections">
+        <a href="#/" data-route="overview" class="nav-tab active">Overview</a>
+        <a href="#/economy" data-route="economy" class="nav-tab">Economy &amp; Trade</a>
+        <a href="#/demographics" data-route="demographics" class="nav-tab">Population &amp; Labour</a>
+        <a href="#/regions" data-route="regions" class="nav-tab">Provincial Atlas</a>
+        <a href="#/releases" data-route="releases" class="nav-tab">Catalog &amp; CSV</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main-shell" id="app-root" aria-live="polite"></main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>VietStat Observatory</strong> — Compiled from published national accounts, customs merchandise ledgers, labour force surveys, and provincial statistical yearbooks (2015–2025).
+      </div>
+      <div class="footer-links">
+        <a href="#/">Overview</a>
+        <a href="#/economy">Macroeconomy</a>
+        <a href="#/demographics">Demographics</a>
+        <a href="#/regions">63-Province Sample</a>
+        <a href="#/releases">CSV Export</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="./app.js"></script>
 </body>
 </html>
